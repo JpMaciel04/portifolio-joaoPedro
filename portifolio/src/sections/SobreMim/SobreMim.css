@@ -57,6 +57,33 @@
   color: var(--text-dim);
 }
 
+.sobre-mim__lang {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+}
+
+.sobre-mim__lang button {
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sobre-mim__lang button.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
 @media (max-width: 640px) {
   .sobre-mim__inner {
     grid-template-columns: 1fr;
@@ -66,5 +93,9 @@
 
   .sobre-mim__highlights {
     justify-content: center;
+  }
+
+  .sobre-mim__lang {
+    margin-inline: auto;
   }
 }

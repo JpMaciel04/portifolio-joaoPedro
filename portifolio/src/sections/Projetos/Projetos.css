@@ -14,67 +14,70 @@
   line-height: 1.7;
 }
 
-.projetos__grid {
-  display: grid;
-  gap: 24px;
-}
-
-@media (min-width: 560px) {
-  .projetos__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.project-card {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: var(--radius);
-  padding: 16px;
+.projetos__timeline {
+  margin-top: 8px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s, transform 0.2s;
+  gap: 40px;
 }
 
-.project-card:hover {
-  border-color: var(--accent-border);
-  transform: translateY(-2px);
+.projetos__timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 1px;
+  background: var(--surface-border);
 }
 
-.project-card__media {
-  height: 140px;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  padding: 12px;
-  display: flex;
-  gap: 6px;
-  align-items: flex-start;
+.projetos__timeline-item {
+  position: relative;
+  padding-left: 34px;
 }
 
-.project-card__media--teal {
-  background: linear-gradient(150deg, #0f2a29 0%, #123a3a 45%, #0a1f2c 100%);
-}
-
-.project-card__media--amber {
-  background: linear-gradient(150deg, #2a2016 0%, #3a2e17 45%, #241a12 100%);
-}
-
-.project-card__media-dot {
-  width: 8px;
-  height: 8px;
+.projetos__timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 4px var(--accent-bg);
 }
 
-.project-card__title {
-  font-size: 19px;
+.projetos__timeline-dot--teal {
+  background: var(--glow-teal);
+}
+
+.projetos__timeline-dot--amber {
+  background: var(--glow-amber);
+}
+
+.projetos__timeline-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
   margin-bottom: 8px;
 }
 
-.project-card__desc {
+.projetos__timeline-heading h3 {
+  font-size: 19px;
+}
+
+.projetos__timeline-date {
   font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  flex-grow: 1;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.projetos__timeline-content p {
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 14px;
 }
 
 .project-card__tags {

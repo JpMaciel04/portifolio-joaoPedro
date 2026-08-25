@@ -31,6 +31,12 @@
   color: #fff;
 }
 
+.field__error {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff6b6b;
+}
+
 .field input,
 .field textarea {
   background: var(--bg-elevated);
@@ -73,6 +79,21 @@
 .contatos__submit:hover {
   background: var(--accent-strong);
   transform: translateY(-1px);
+}
+
+.contatos__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contatos__status {
+  font-size: 13px;
+  text-align: center;
+}
+
+.contatos__status--error {
+  color: #ff6b6b;
 }
 
 .contatos__socials {
