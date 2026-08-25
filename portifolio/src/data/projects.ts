@@ -4,23 +4,26 @@ export type Project = {
   description: string
   tags: string[]
   accent: 'teal' | 'amber'
+  date: string
 }
 
 export const projects: Project[] = [
   {
-    id: 'cryptopulse',
-    title: 'CryptoPulse SaaS',
+    id: 'puc-caronas',
+    title: 'PUC Caronas',
     description:
-      'Um painel analítico completo para monitoramento e gestão de criptoativos em tempo real, com gráficos interativos e alertas customizáveis.',
-    tags: ['Next.js', 'TypeScript', 'D3.js', 'Tailwind'],
+      'Plataforma web de carona universitária desenvolvida em equipe de seis integrantes, do levantamento de requisitos à implementação. Contribuí com React no front-end e C#/.NET no back-end, além de containerização com Docker e pipelines de CI/CD com GitHub Actions para deploy na AWS.',
+    tags: ['React', 'C#/.NET', 'Docker', 'AWS', 'GitHub Actions'],
     accent: 'teal',
+    date: '2025-06-01',
   },
   {
-    id: 'aura-store',
-    title: 'Aura Minimalist Store',
+    id: 'cs2-webscraping',
+    title: 'WebScraping + Data Analytics — CS2 Match Data',
     description:
-      'Plataforma de e-commerce de alta performance focada em móveis de design minimalista, com checkout otimizado e catálogo dinâmico.',
-    tags: ['React', 'GraphQL', 'Stripe', 'NextJS'],
+      'Pipeline pessoal de extração automatizada de dados de partidas competitivas de Counter-Strike 2 a partir da plataforma GamerClubs, estruturando os dados coletados para análise posterior. Projeto de código aberto no GitHub.',
+    tags: ['Python', 'Web Scraping', 'Análise de Dados'],
     accent: 'amber',
+    date: '2025-02-01',
   },
 ]
