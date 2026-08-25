@@ -42,9 +42,13 @@ function Scene() {
 
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[50, 50]} />
+          {/* The floor re-renders the scene into this texture every frame
+              for the reflection; 2048 was overkill given the heavy blur
+              (blur/roughness already soften it a lot) — 1024 halves that
+              cost with no visible difference. */}
           <MeshReflectorMaterial
             blur={[300, 30]}
-            resolution={2048}
+            resolution={1024}
             mixBlur={1}
             mixStrength={180}
             roughness={1}
@@ -66,7 +70,7 @@ function Scene() {
 
       <EffectComposer>
         <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0} intensity={5} />
-        <DepthOfField target={[0, 0, 13]} focalLength={0.3} bokehScale={15} height={700} />
+        <DepthOfField target={[0, 0, 13]} focalLength={0.3} bokehScale={15} height={480} />
       </EffectComposer>
 
       <CameraRig />

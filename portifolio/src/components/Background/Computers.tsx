@@ -841,7 +841,11 @@ function Screen({
       />
       <mesh geometry={nodes[panel].geometry}>
         <meshBasicMaterial toneMapped={false}>
-          <RenderTexture width={512} height={512} attach="map" anisotropy={16}>
+          {/* Each of these renders a full extra mini-scene per frame (9
+              screens total) — 256px is plenty for monitors this small and
+              this blurred by bloom/DoF, and quarters that per-screen cost
+              vs. the original 512px. */}
+          <RenderTexture width={256} height={256} attach="map" anisotropy={8}>
             {children}
           </RenderTexture>
         </meshBasicMaterial>
