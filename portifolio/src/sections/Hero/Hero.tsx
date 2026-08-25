@@ -1,26 +1,40 @@
 import './Hero.css'
 
 const STACK = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Tailwind CSS',
-  'Figma',
-  'Node.js',
-  'GraphQL',
-  'Git & CI/CD',
+  'Java',
+  'Python',
+  'C#',
+  'JavaScript',
+  'SQL',
+  'Shell Script',
+  'React.js',
+  'HTML',
+  'CSS',
+  '.NET',
+  'Java Spring Boot',
+  'REST API',
+  'AWS',
+  'Docker',
+  'GitHub Actions',
+  'Git',
+  'GitHub',
+  'Linux',
+  'Windows',
 ]
 
 function Hero() {
   return (
     <section id="topo" className="hero">
       <div className="container hero__inner">
-        <span className="hero__eyebrow">Olá, me chamo João</span>
-        <h1 className="hero__title">Engenheiro de Software</h1>
+        <span className="hero__eyebrow">Olá, me chamo João Pedro</span>
+        <h1 className="hero__title">Estudante de Engenharia de Software</h1>
         <p className="hero__lead">
-          Construo interfaces rápidas e bem cuidadas, do design ao deploy.
-          Gosto de transformar ideias complexas em produtos digitais simples
-          de usar, com atenção a performance, acessibilidade e detalhes.
+          Curso Engenharia de Software na PUC Minas, com experiência prática
+          em desenvolvimento Full Stack (React.js, Java Spring Boot, REST
+          API), automação com Python e Shell, e suporte técnico em ambientes
+          Linux e Windows. Busco uma posição de estágio em desenvolvimento de
+          software para aplicar e expandir minhas habilidades técnicas em um
+          ambiente colaborativo de engenharia.
         </p>
 
         <div className="hero__stack">

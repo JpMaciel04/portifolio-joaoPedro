@@ -1,6 +1,28 @@
 import { projects } from '../../data/projects'
 import './Projetos.css'
 
+const MONTHS = [
+  'jan',
+  'fev',
+  'mar',
+  'abr',
+  'mai',
+  'jun',
+  'jul',
+  'ago',
+  'set',
+  'out',
+  'nov',
+  'dez',
+]
+
+function formatProjectDate(iso: string) {
+  const [year, month] = iso.split('-')
+  return `${MONTHS[Number(month) - 1]}. ${year}`
+}
+
+const sortedProjects = [...projects].sort((a, b) => b.date.localeCompare(a.date))
+
 function Projetos() {
   return (
     <section id="projetos" className="projetos">
@@ -9,42 +31,47 @@ function Projetos() {
           <span className="section-eyebrow">Portfólio</span>
           <h2 className="section-title">Trabalhos em Destaque</h2>
           <p>
-            Uma seleção de projetos em que cuidei de ponta a ponta: da
-            arquitetura da interface à integração com APIs, sempre com foco
-            em performance e experiência do usuário.
+            Uma seleção dos projetos em que atuei do levantamento de
+            requisitos à implementação, em equipe ou individualmente, sempre
+            com foco em código organizado e entrega de ponta a ponta.
           </p>
           <p>
-            Cada projeto abaixo reúne um pouco do que domino — desde
-            dashboards analíticos até plataformas de e-commerce completas.
+            Cada projeto abaixo reúne um pouco do que domino — de plataformas
+            web colaborativas a pipelines de automação e análise de dados.
           </p>
         </div>
 
-        <div className="projetos__grid">
-          {projects.map((project) => (
-            <article key={project.id} className="project-card">
-              <div className={`project-card__media project-card__media--${project.accent}`}>
-                <span className="project-card__media-dot" />
-                <span className="project-card__media-dot" />
-                <span className="project-card__media-dot" />
+        <ol className="projetos__timeline">
+          {sortedProjects.map((project) => (
+            <li key={project.id} className="projetos__timeline-item">
+              <span
+                className={`projetos__timeline-dot projetos__timeline-dot--${project.accent}`}
+                aria-hidden="true"
+              />
+              <div className="projetos__timeline-content">
+                <div className="projetos__timeline-heading">
+                  <h3>{project.title}</h3>
+                  <span className="projetos__timeline-date">
+                    {formatProjectDate(project.date)}
+                  </span>
+                </div>
+                <p>{project.description}</p>
+
+                <ul className="project-card__tags">
+                  {project.tags.map((tag) => (
+                    <li key={tag} className="pill">
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+
+                <a href="#" className="project-card__link">
+                  Ver Detalhes do Projeto <span aria-hidden="true">→</span>
+                </a>
               </div>
-
-              <h3 className="project-card__title">{project.title}</h3>
-              <p className="project-card__desc">{project.description}</p>
-
-              <ul className="project-card__tags">
-                {project.tags.map((tag) => (
-                  <li key={tag} className="pill">
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-
-              <a href="#" className="project-card__link">
-                Ver Detalhes do Projeto <span aria-hidden="true">→</span>
-              </a>
-            </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

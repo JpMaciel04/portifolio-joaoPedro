@@ -1,6 +1,10 @@
 import { experiences } from '../../data/experience'
 import './Experiencias.css'
 
+const sortedExperiences = [...experiences].sort((a, b) =>
+  b.startDate.localeCompare(a.startDate),
+)
+
 function Experiencias() {
   return (
     <section id="experiencias" className="experiencias">
@@ -9,7 +13,7 @@ function Experiencias() {
         <h2 className="section-title">Experiências</h2>
 
         <ol className="timeline">
-          {experiences.map((exp) => (
+          {sortedExperiences.map((exp) => (
             <li key={exp.id} className="timeline__item">
               <span className="timeline__dot" aria-hidden="true" />
               <div className="timeline__content">
