@@ -51,7 +51,7 @@ function SobreMim() {
           <span>JP</span>
         </div>
 
-        <div className="sobre-mim__text">
+        <div className="sobre-mim__text content-panel">
           <div className="sobre-mim__lang" role="group" aria-label="Idioma / Language">
             <button
               type="button"

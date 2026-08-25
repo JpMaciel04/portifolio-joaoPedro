@@ -25,7 +25,7 @@ const STACK = [
 function Hero() {
   return (
     <section id="topo" className="hero">
-      <div className="container hero__inner">
+      <div className="container hero__inner content-panel">
         <span className="hero__eyebrow">Olá, me chamo João Pedro</span>
         <h1 className="hero__title">Estudante de Engenharia de Software</h1>
         <p className="hero__lead">

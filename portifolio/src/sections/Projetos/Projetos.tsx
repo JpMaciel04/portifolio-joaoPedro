@@ -27,7 +27,7 @@ function Projetos() {
   return (
     <section id="projetos" className="projetos">
       <div className="container projetos__inner">
-        <div className="projetos__intro">
+        <div className="projetos__intro content-panel">
           <span className="section-eyebrow">Portfólio</span>
           <h2 className="section-title">Trabalhos em Destaque</h2>
           <p>
@@ -41,7 +41,7 @@ function Projetos() {
           </p>
         </div>
 
-        <ol className="projetos__timeline">
+        <ol className="projetos__timeline content-panel">
           {sortedProjects.map((project) => (
             <li key={project.id} className="projetos__timeline-item">
               <span

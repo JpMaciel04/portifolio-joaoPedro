@@ -2,8 +2,11 @@
   padding-block: 60px 100px;
 }
 
+.experiencias__intro {
+  margin-bottom: 24px;
+}
+
 .timeline {
-  margin-top: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -63,6 +66,7 @@
 .timeline__period {
   font-size: 14px;
   color: var(--text-dim);
+  text-shadow: var(--text-shadow-soft);
   white-space: nowrap;
 }
 

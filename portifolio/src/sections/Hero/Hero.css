@@ -16,6 +16,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--accent-strong);
+  text-shadow: var(--text-shadow-soft);
   margin-bottom: 14px;
 }
 
@@ -40,6 +41,7 @@
   font-weight: 600;
   color: #fff;
   font-size: 15px;
+  text-shadow: var(--text-shadow-soft);
   margin-bottom: 16px;
 }
 

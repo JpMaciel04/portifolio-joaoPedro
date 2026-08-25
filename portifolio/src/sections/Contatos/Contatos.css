@@ -5,6 +5,13 @@
 .contatos__inner {
   max-width: 560px;
   text-align: center;
+  padding: 40px 40px;
+}
+
+@media (max-width: 640px) {
+  .contatos__inner {
+    padding: 28px 24px;
+  }
 }
 
 .contatos__title {
@@ -29,12 +36,14 @@
   font-size: 14px;
   font-weight: 600;
   color: #fff;
+  text-shadow: var(--text-shadow-soft);
 }
 
 .field__error {
   font-size: 12px;
   font-weight: 500;
   color: #ff6b6b;
+  text-shadow: var(--text-shadow-soft);
 }
 
 .field input,

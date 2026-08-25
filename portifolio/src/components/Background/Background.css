@@ -1,60 +1,11 @@
 .bg-fx {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
-  background: radial-gradient(circle at 50% -10%, #10121b 0%, #06070a 55%);
+  background: #000;
 }
 
-.bg-fx__grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, #000 40%, transparent 90%);
-}
-
-.bg-fx__glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.35;
-}
-
-.bg-fx__glow--teal-1 {
-  width: 420px;
-  height: 420px;
-  top: 8%;
-  left: 8%;
-  background: var(--glow-teal);
-  opacity: 0.16;
-}
-
-.bg-fx__glow--teal-2 {
-  width: 320px;
-  height: 320px;
-  top: 55%;
-  right: 6%;
-  background: var(--glow-teal);
-  opacity: 0.14;
-}
-
-.bg-fx__glow--purple {
-  width: 520px;
-  height: 520px;
-  top: 20%;
-  right: 12%;
-  background: var(--accent);
-  opacity: 0.18;
-}
-
-.bg-fx__glow--amber {
-  width: 260px;
-  height: 260px;
-  top: 38%;
-  left: 42%;
-  background: var(--glow-amber);
-  opacity: 0.1;
+.bg-fx canvas {
+  pointer-events: none;
 }

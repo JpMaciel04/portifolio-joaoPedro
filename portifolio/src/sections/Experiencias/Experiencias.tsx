@@ -9,10 +9,12 @@ function Experiencias() {
   return (
     <section id="experiencias" className="experiencias">
       <div className="container">
-        <span className="section-eyebrow">Trajetória</span>
-        <h2 className="section-title">Experiências</h2>
+        <div className="experiencias__intro content-panel">
+          <span className="section-eyebrow">Trajetória</span>
+          <h2 className="section-title">Experiências</h2>
+        </div>
 
-        <ol className="timeline">
+        <ol className="timeline content-panel">
           {sortedExperiences.map((exp) => (
             <li key={exp.id} className="timeline__item">
               <span className="timeline__dot" aria-hidden="true" />

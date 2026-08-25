@@ -74,7 +74,7 @@ function Contatos() {
 
   return (
     <section id="contatos" className="contatos">
-      <div className="container contatos__inner">
+      <div className="container contatos__inner content-panel">
         <h2 className="contatos__title">Entre em contato!</h2>
 
         <form className="contatos__form" onSubmit={handleSubmit} noValidate>

@@ -71,6 +71,7 @@
 .projetos__timeline-date {
   font-size: 14px;
   color: var(--text-dim);
+  text-shadow: var(--text-shadow-soft);
   white-space: nowrap;
 }
 

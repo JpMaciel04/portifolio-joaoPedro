@@ -22,6 +22,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--accent-strong);
+  text-shadow: var(--text-shadow-soft);
   margin-bottom: 12px;
 }
 
@@ -29,4 +30,20 @@
   font-size: clamp(28px, 4vw, 40px);
   letter-spacing: -0.5px;
   margin-bottom: 16px;
+}
+
+.content-panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(var(--panel-blur));
+  -webkit-backdrop-filter: blur(var(--panel-blur));
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+  padding: 32px 36px;
+}
+
+@media (max-width: 640px) {
+  .content-panel {
+    padding: 24px 20px;
+  }
 }
