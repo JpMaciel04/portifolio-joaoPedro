@@ -1,8 +1,8 @@
 # Portifólio - João Pedro
 
-Meu portifólio pessoal, me chamo João Pedro Maciel de Oliveira, sou estudante de Engenharia de Software na PUC Minas, para apresentar minha trajetória: projetos, experiências profissionais e formas de contato, em uma única página.
+Me chamo João Pedro Maciel de Oliveira e sou estudante de Engenharia de Software na PUC Minas. Este é o meu portfólio pessoal: uma página única reunindo meus projetos, experiências profissionais e um jeito de entrar em contato comigo.
 
-Prototipei o design no Figma antes da implementação. Protótipos interativos disponíveis em [`wireframe/links_uteis.MD`](wireframe/links_uteis.MD).
+Antes de sair codando, desenhei tudo no Figma. Os protótipos interativos estão em [`wireframe/links_uteis.MD`](wireframe/links_uteis.MD), pra quem quiser ver como o design evoluiu até virar código.
 
 ## Site Publicado
 
@@ -35,12 +35,12 @@ Prototipei o design no Figma antes da implementação. Protótipos interativos d
 
 ## Funcionalidades
 
-- **Sobre Mim** com toggle PT/EN (texto e destaques traduzidos, sem libs de i18n).
-- **Projetos** e **Experiências** em timelines dinâmicas, ordenadas automaticamente por data a partir dos dados em `src/data/`.
-- **Contato** com formulário funcional (envio real de e-mail via EmailJS) e validação básica (nome, e-mail, mensagem) com mensagens de erro inline.
-- **Background 3D em tela cheia**, fixo atrás de todo o conteúdo — uma adaptação do exemplo ["Monitors"](https://pmndrs.github.io/examples/examples/monitors) do pmndrs (pilha de monitores CRT com reflexo no chão e bloom), construída com `@react-three/fiber`, `@react-three/drei` e `@react-three/postprocessing`.
-- **Painéis de vidro fosco** (`content-panel`, `backdrop-filter: blur()`) atrás de cada bloco de texto, garantindo contraste de leitura sobre o fundo 3D sem precisar escurecer a cena.
-- Todo o conteúdo (bio, projetos, experiências) reflete meu currículo real.
+- A seção **Sobre Mim** tem um botão pra trocar entre português e inglês — traduzi o texto e os destaques na mão, sem usar biblioteca de i18n.
+- **Projetos** e **Experiências** aparecem em linhas do tempo que se ordenam sozinhas por data, puxando os dados de `src/data/`. Pra adicionar algo novo, basta editar esses arquivos.
+- O formulário de **Contato** manda e-mail de verdade (via EmailJS) e valida nome, e-mail e mensagem antes de enviar, mostrando o erro na hora, embaixo do campo.
+- O fundo é uma cena 3D em tela cheia, sempre atrás do conteúdo — adaptei o exemplo ["Monitors"](https://pmndrs.github.io/examples/examples/monitors) do pmndrs (uma pilha de monitores CRT antigos com reflexo no chão e bloom) usando `@react-three/fiber`, `@react-three/drei` e `@react-three/postprocessing`.
+- Como o fundo é bem vivo, coloquei painéis de vidro fosco (`content-panel`, com `backdrop-filter: blur()`) atrás de cada bloco de texto pra manter a leitura confortável sem precisar escurecer a cena.
+- Bio, projetos e experiências são reais — é o meu currículo mesmo, só que em forma de site.
 
 ## Tecnologias
 
@@ -53,7 +53,7 @@ Prototipei o design no Figma antes da implementação. Protótipos interativos d
 
 ## Estrutura do site
 
-Aplicação em `portifolio/`, composta por seções renderizadas em sequência a partir de `App.tsx`:
+A aplicação fica em `portifolio/`. O `App.tsx` só encaixa as seções em sequência, uma depois da outra:
 
 ```
 Background → Nav → Hero → Projetos → SobreMim → Experiencias → Contatos
@@ -78,7 +78,7 @@ Cada seção corresponde a uma âncora de navegação (`#projetos`, `#sobre-mim`
 
 ## Uso
 
-O site é uma página única — navegue entre as seções pelo menu no topo (`Projetos`, `Sobre Mim`, `Experiências`, `Contatos`), que faz scroll até a âncora correspondente. Em telas estreitas, o menu vira um botão hambúrguer. Para só visitar o site publicado, nenhuma configuração é necessária; a seção "Rodando o projeto" abaixo é só para quem quer rodar/editar localmente.
+É tudo página única: os links do menu no topo (`Projetos`, `Sobre Mim`, `Experiências`, `Contatos`) fazem scroll até a seção correspondente. Em tela estreita, o menu vira um hambúrguer. Se você só quer visitar o site publicado, não precisa configurar nada — a seção "Rodando o projeto" abaixo é só para quem quiser rodar ou editar o código localmente.
 
 ## Rodando o projeto
 
@@ -87,7 +87,7 @@ cd portifolio
 npm install
 ```
 
-Para o formulário de contato enviar e-mail de verdade, copie `portifolio/.env.example` para `portifolio/.env` e preencha com as credenciais de uma conta gratuita no [EmailJS](https://www.emailjs.com/) (`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY`). Sem isso, o site funciona normalmente, só o envio do formulário falha.
+Para o formulário de contato mandar e-mail de verdade, copie `portifolio/.env.example` para `portifolio/.env` e preencha com as credenciais de uma conta gratuita no [EmailJS](https://www.emailjs.com/) (`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY`). Sem isso o site roda normalmente do mesmo jeito, só o envio do formulário que não funciona.
 
 ```bash
 npm run dev
@@ -97,9 +97,9 @@ Outros scripts disponíveis: `npm run build`, `npm run lint`, `npm run preview`.
 
 ## Deploy
 
-O projeto está publicado na Vercel (build estático via Vite, sem backend):
+O site está no ar pela Vercel — build estático via Vite, sem backend:
 
 1. Crie uma conta na [Vercel](https://vercel.com/) e importe este repositório do GitHub.
-2. A Vercel detecta o Vite automaticamente — confirme *Root Directory* como `portifolio/`, build command `npm run build` e output directory `dist`.
-3. Antes do primeiro deploy, cadastre as variáveis de ambiente em **Project Settings → Environment Variables**: `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY` (mesmos valores usados no `.env` local — ver seção acima). Sem elas o site publica normalmente, mas o formulário de contato falha silenciosamente.
-4. Cada push na branch principal gera um novo deploy automático.
+2. A Vercel já reconhece o Vite sozinha — só confirme se o *Root Directory* está como `portifolio/`, o build command como `npm run build` e o output directory como `dist`.
+3. Antes do primeiro deploy, cadastre as variáveis de ambiente em **Project Settings → Environment Variables**: `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` e `VITE_EMAILJS_PUBLIC_KEY` (os mesmos valores do `.env` local — ver seção acima). Repare no prefixo `VITE_`: sem ele o Vite não expõe a variável para o navegador, e o formulário falha sem avisar por quê.
+4. Depois disso é só push na branch principal — cada um gera um deploy novo automaticamente.
