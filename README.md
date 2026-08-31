@@ -6,7 +6,7 @@ Antes de sair codando, desenhei tudo no Figma. Os protótipos interativos estão
 
 ## Site Publicado
 
-🔗 [meu-portifolio-react-ofhy0nvvd-joao-pedro-maciels-projects.vercel.app](https://meu-portifolio-react-ofhy0nvvd-joao-pedro-maciels-projects.vercel.app/#sobre-mim)
+🔗 [https://meu-portifolio-react-lac.vercel.app](https://meu-portifolio-react-lac.vercel.app)
 
 ## Demonstração
 
