@@ -6,7 +6,7 @@ Prototipei o design no Figma antes da implementação. Protótipos interativos d
 
 ## Site Publicado
 
-🔗 <link após deploy>
+🔗 [meu-portifolio-react-ofhy0nvvd-joao-pedro-maciels-projects.vercel.app](https://meu-portifolio-react-ofhy0nvvd-joao-pedro-maciels-projects.vercel.app/#sobre-mim)
 
 ## Demonstração
 
