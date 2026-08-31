@@ -105,6 +105,10 @@
   color: #ff6b6b;
 }
 
+.contatos__status--success {
+  color: var(--glow-teal);
+}
+
 .contatos__socials {
   display: flex;
   justify-content: center;

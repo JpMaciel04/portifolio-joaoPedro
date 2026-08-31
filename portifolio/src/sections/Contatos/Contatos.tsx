@@ -80,9 +80,16 @@ function Contatos() {
         <form className="contatos__form" onSubmit={handleSubmit} noValidate>
           <label className="field">
             <span>Seu Nome</span>
-            <input type="text" name="nome" placeholder="Como quer ser chamado?" required />
+            <input
+              type="text"
+              name="nome"
+              placeholder="Como quer ser chamado?"
+              required
+              aria-invalid={Boolean(errors.nome)}
+              aria-describedby={errors.nome ? 'nome-error' : undefined}
+            />
             {errors.nome && (
-              <span className="field__error" role="alert">
+              <span id="nome-error" className="field__error" role="alert">
                 {errors.nome}
               </span>
             )}
@@ -90,9 +97,16 @@ function Contatos() {
 
           <label className="field">
             <span>Endereço de E-mail</span>
-            <input type="email" name="email" placeholder="exemplo@email.com" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="exemplo@email.com"
+              required
+              aria-invalid={Boolean(errors.email)}
+              aria-describedby={errors.email ? 'email-error' : undefined}
+            />
             {errors.email && (
-              <span className="field__error" role="alert">
+              <span id="email-error" className="field__error" role="alert">
                 {errors.email}
               </span>
             )}
@@ -105,9 +119,11 @@ function Contatos() {
               rows={5}
               placeholder="Escreva o escopo da sua ideia ou proposta..."
               required
+              aria-invalid={Boolean(errors.mensagem)}
+              aria-describedby={errors.mensagem ? 'mensagem-error' : undefined}
             />
             {errors.mensagem && (
-              <span className="field__error" role="alert">
+              <span id="mensagem-error" className="field__error" role="alert">
                 {errors.mensagem}
               </span>
             )}
@@ -121,6 +137,12 @@ function Contatos() {
                 : 'Enviar Mensagem'}
             <span aria-hidden="true">➤</span>
           </button>
+
+          {status === 'success' && (
+            <p className="contatos__status contatos__status--success" role="status">
+              Mensagem enviada com sucesso! Retorno em breve.
+            </p>
+          )}
 
           {status === 'error' && (
             <p className="contatos__status contatos__status--error" role="alert">

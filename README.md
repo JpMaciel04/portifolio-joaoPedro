@@ -4,6 +4,18 @@ Meu portifólio pessoal, me chamo João Pedro Maciel de Oliveira, sou estudante 
 
 Prototipei o design no Figma antes da implementação. Protótipos interativos disponíveis em [`wireframe/links_uteis.MD`](wireframe/links_uteis.MD).
 
+## Site Publicado
+
+🔗 <link após deploy>
+
+## Demonstração
+
+### Portfólio em execução
+![Portfólio em execução](demo/portifolio.png)
+
+### WebScraping + Data Analytics — CS2 Match Data
+![WebScraping CS2 em execução](demo/cs2-webscraping.png)
+
 ## Protótipos
 
 ### Landing Page / Hero
@@ -64,6 +76,10 @@ portifolio/
 
 Cada seção corresponde a uma âncora de navegação (`#projetos`, `#sobre-mim`, `#experiencias`, `#contatos`), usada pelos links do `Nav`.
 
+## Uso
+
+O site é uma página única — navegue entre as seções pelo menu no topo (`Projetos`, `Sobre Mim`, `Experiências`, `Contatos`), que faz scroll até a âncora correspondente. Em telas estreitas, o menu vira um botão hambúrguer. Para só visitar o site publicado, nenhuma configuração é necessária; a seção "Rodando o projeto" abaixo é só para quem quer rodar/editar localmente.
+
 ## Rodando o projeto
 
 ```bash
@@ -78,3 +94,12 @@ npm run dev
 ```
 
 Outros scripts disponíveis: `npm run build`, `npm run lint`, `npm run preview`.
+
+## Deploy
+
+O projeto está publicado na Vercel (build estático via Vite, sem backend):
+
+1. Crie uma conta na [Vercel](https://vercel.com/) e importe este repositório do GitHub.
+2. A Vercel detecta o Vite automaticamente — confirme *Root Directory* como `portifolio/`, build command `npm run build` e output directory `dist`.
+3. Antes do primeiro deploy, cadastre as variáveis de ambiente em **Project Settings → Environment Variables**: `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY` (mesmos valores usados no `.env` local — ver seção acima). Sem elas o site publica normalmente, mas o formulário de contato falha silenciosamente.
+4. Cada push na branch principal gera um novo deploy automático.
