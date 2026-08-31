@@ -5,17 +5,19 @@ export type Project = {
   tags: string[]
   accent: 'teal' | 'amber'
   date: string
+  repoUrl: string
 }
 
 export const projects: Project[] = [
   {
-    id: 'puc-caronas',
-    title: 'PUC Caronas',
+    id: 'portifolio-pessoal',
+    title: 'Portfólio Pessoal',
     description:
-      'Plataforma web de carona universitária desenvolvida em equipe de seis integrantes, do levantamento de requisitos à implementação. Contribuí com React no front-end e C#/.NET no back-end, além de containerização com Docker e pipelines de CI/CD com GitHub Actions para deploy na AWS.',
-    tags: ['React', 'C#/.NET', 'Docker', 'AWS', 'GitHub Actions'],
+      'Site pessoal desenvolvido em React e TypeScript com Vite, com fundo 3D interativo construído em React Three Fiber (Three.js), incluindo pós-processamento com bloom e depth of field e uma câmera com parallax que reage ao mouse. Estruturado em seções reutilizáveis com CSS puro e integração de formulário de contato via EmailJS.',
+    tags: ['React', 'TypeScript', 'Vite', 'Three.js', 'React Three Fiber'],
     accent: 'teal',
-    date: '2025-06-01',
+    date: '2025-08-01',
+    repoUrl: 'https://github.com/JpMaciel04/portifolio-joaoPedro',
   },
   {
     id: 'cs2-webscraping',
@@ -25,5 +27,6 @@ export const projects: Project[] = [
     tags: ['Python', 'Web Scraping', 'Análise de Dados'],
     accent: 'amber',
     date: '2025-02-01',
+    repoUrl: 'https://github.com/JpMaciel04/webscraper-gamerclubs-analytics',
   },
 ]

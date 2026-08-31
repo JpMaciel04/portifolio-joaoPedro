@@ -65,7 +65,7 @@ function Projetos() {
                   ))}
                 </ul>
 
-                <a href="#" className="project-card__link">
+                <a href={project.repoUrl} target="_blank" rel="noreferrer" className="project-card__link">
                   Ver Detalhes do Projeto <span aria-hidden="true">→</span>
                 </a>
               </div>
