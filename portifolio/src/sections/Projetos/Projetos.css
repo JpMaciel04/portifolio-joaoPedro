@@ -75,6 +75,16 @@
   white-space: nowrap;
 }
 
+.project-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--surface-border);
+  margin-bottom: 16px;
+}
+
 .projetos__timeline-content p {
   max-width: 640px;
   line-height: 1.7;

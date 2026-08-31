@@ -55,6 +55,14 @@ function Projetos() {
                     {formatProjectDate(project.date)}
                   </span>
                 </div>
+
+                <img
+                  src={project.image}
+                  alt={`Captura de tela do projeto ${project.title} em execução`}
+                  loading="lazy"
+                  className="project-card__image"
+                />
+
                 <p>{project.description}</p>
 
                 <ul className="project-card__tags">

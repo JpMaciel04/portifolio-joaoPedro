@@ -6,6 +6,7 @@ export type Project = {
   accent: 'teal' | 'amber'
   date: string
   repoUrl: string
+  image: string
 }
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     accent: 'teal',
     date: '2025-08-01',
     repoUrl: 'https://github.com/JpMaciel04/portifolio-joaoPedro',
+    image: '/projects/portifolio-pessoal.png',
   },
   {
     id: 'cs2-webscraping',
@@ -28,5 +30,6 @@ export const projects: Project[] = [
     accent: 'amber',
     date: '2025-02-01',
     repoUrl: 'https://github.com/JpMaciel04/webscraper-gamerclubs-analytics',
+    image: '/projects/cs2-webscraping.png',
   },
 ]
