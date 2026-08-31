@@ -1,8 +1,8 @@
 # Portifólio - João Pedro
 
-Portifólio pessoal de João Pedro Maciel de Oliveira, estudante de Engenharia de Software na PUC Minas, para apresentar sua trajetória: projetos, experiências profissionais e formas de contato, em uma única página (single-page) com navegação por âncoras.
+Meu portifólio pessoal, me chamo João Pedro Maciel de Oliveira, sou estudante de Engenharia de Software na PUC Minas, para apresentar minha trajetória: projetos, experiências profissionais e formas de contato, em uma única página.
 
-O design foi prototipado no Figma antes da implementação. Protótipos interativos disponíveis em [`wireframe/links_uteis.MD`](wireframe/links_uteis.MD).
+Prototipei o design no Figma antes da implementação. Protótipos interativos disponíveis em [`wireframe/links_uteis.MD`](wireframe/links_uteis.MD).
 
 ## Protótipos
 
@@ -28,7 +28,7 @@ O design foi prototipado no Figma antes da implementação. Protótipos interati
 - **Contato** com formulário funcional (envio real de e-mail via EmailJS) e validação básica (nome, e-mail, mensagem) com mensagens de erro inline.
 - **Background 3D em tela cheia**, fixo atrás de todo o conteúdo — uma adaptação do exemplo ["Monitors"](https://pmndrs.github.io/examples/examples/monitors) do pmndrs (pilha de monitores CRT com reflexo no chão e bloom), construída com `@react-three/fiber`, `@react-three/drei` e `@react-three/postprocessing`.
 - **Painéis de vidro fosco** (`content-panel`, `backdrop-filter: blur()`) atrás de cada bloco de texto, garantindo contraste de leitura sobre o fundo 3D sem precisar escurecer a cena.
-- Todo o conteúdo (bio, projetos, experiências) reflete o currículo real do autor.
+- Todo o conteúdo (bio, projetos, experiências) reflete meu currículo real.
 
 ## Tecnologias
 
